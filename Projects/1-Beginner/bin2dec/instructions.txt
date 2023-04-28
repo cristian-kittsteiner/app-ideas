@@ -1,0 +1,6 @@
+So the way I think I am going to handle this project is by
+    1. making a function to translate binary to number
+    2. editing it to add decimals
+    3. creating an input and pulling the input value for the function
+    4. create a div to display the number
+    5. Style that hoë
