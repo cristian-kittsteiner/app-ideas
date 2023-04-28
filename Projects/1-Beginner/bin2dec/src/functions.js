@@ -21,8 +21,7 @@ function binToDec(stringNum) {
         decimal += number * Math.pow(2, exponent);
         exponent++;
       } else {
-        console.log("please only enter 1 or 0");
-        return;
+        return "Error! Please only enter 1s or 0s";
       }
     }
   }
