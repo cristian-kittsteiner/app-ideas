@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState("20");
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="container">
+      <div className="previewer">
+        <img
+          style={{ borderRadius: `${count}px` }}
+          className="picture"
+          src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/26aa084b-6084-4be3-8628-95f078550408/d7jaspk-04e6fc48-b17a-492a-88ae-1014f48b4dc6.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI2YWEwODRiLTYwODQtNGJlMy04NjI4LTk1ZjA3ODU1MDQwOFwvZDdqYXNway0wNGU2ZmM0OC1iMTdhLTQ5MmEtODhhZS0xMDE0ZjQ4YjRkYzYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.U2IztrwAQ3TwAABEbKcTVW4t2jntpWDsN4Ay_DyuXGY"
+          alt=""
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <input
+        className="input"
+        value={count}
+        onInput={(e) => setCount(e.target.value)}
+      ></input>
+      {/* <button className="button">Enter</button> */}
+    </div>
+  );
 }
 
-export default App
+export default App;
