@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function App() {
   const [count, setCount] = useState("50px");
+  let x = 0;
 
   return (
     <div className="container">
